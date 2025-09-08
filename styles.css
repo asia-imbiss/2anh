@@ -12,6 +12,7 @@
 
   --menu-panel: color-mix(in oklab, var(--primary) 3%, #fff);
   --menu-panel-border: color-mix(in oklab, var(--primary) 8%, var(--line));
+  --mobile-bar-height: 64px;
 
 }
 
@@ -27,7 +28,8 @@ html, body {
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
 }
 
 body {
@@ -72,19 +74,20 @@ body {
   z-index: 100;
   background: rgba(255, 255, 255, .7);
   backdrop-filter: saturate(1.1) blur(8px);
-  border-bottom: 1px solid var(--line)
+  border-bottom: 1px solid var(--line);
+  text-align:center;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
-  padding: 14px 0
+  padding: 14px 0;
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-weight: 700;
@@ -97,7 +100,8 @@ body {
 }
 
 .brand-name {
-  letter-spacing: .2px
+  letter-spacing: .2px;
+  font-size: 28px;
 }
 
 .nav {
@@ -181,7 +185,9 @@ body {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  border: 1px solid transparent
+  border: 1px solid transparent;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+
 }
 
 .btn-primary {
@@ -195,14 +201,32 @@ body {
 }
 
 .btn-outline {
-  background: transparent;
-  border-color: var(--line);
-  color: var(--text)
+  background: color-mix(in oklab, var(--primary) 6%, #fff);
+  color: var(--primary-700);
+  border-color: color-mix(in oklab, var(--primary) 35%, var(--line));
 }
 
 .btn-outline:hover {
-  border-color: color-mix(in oklab, var(--primary) 50%, var(--line))
+  background: color-mix(in oklab, var(--primary) 12%, #fff);
+  border-color: color-mix(in oklab, var(--primary) 55%, var(--line));
+  color: var(--primary-700);
 }
+
+.btn-outline:active {
+  background: color-mix(in oklab, var(--primary) 18%, #fff);
+  border-color: color-mix(in oklab, var(--primary) 65%, var(--line));
+}
+
+.btn-outline:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.btn[disabled], .btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
 
 .section {
   padding: 60px 0
@@ -236,24 +260,25 @@ body {
 .menu-tools {
   display: flex;
   align-items: center;
-  gap: 12px
+  gap: 100px;
 }
 
 .search {
   position: relative;
   display: inline-flex;
-  align-items: center
+  align-items: center;
 }
 
 .search input {
   appearance: none;
   outline: 0;
-  border: 1px solid var(--line);
+  border: 1px solid;
   background: var(--surface);
   color: var(--text);
   border-radius: 10px;
   padding: 10px 12px;
-  min-width: 240px
+  min-width: 360px;
+  max-width: 100%;
 }
 
 .search input::placeholder {
@@ -268,23 +293,62 @@ body {
   transform: translateY(-50%);
   font-size: 12px;
   color: var(--muted);
-  border: 1px solid var(--line);
   padding: 0 6px;
-  border-radius: 6px
+  border-radius: 6px;
 }
+
+@media (max-width: 700px) {
+  .section-header {
+    flex-wrap: wrap;
+  }
+  .menu-tools,
+  .search {
+    width: 100%;
+  }
+  .search input {
+    width: 100%;
+    min-width: 0; /* verhindert horizontales Scrollen auf kleinen Screens */
+  }
+}
+
 
 .menu-cats {
   position: sticky;
   top: 64px;
   z-index: 50;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 8px;
-  overflow: auto;
+  overflow: visible;
   padding: 10px 12px; /* etwas mehr Luft */
-  background: var(--menu-panel); /* sanfte Tönung */
+  background: var(--surface); /* sanfte Tönung */
   border: 1px solid var(--menu-panel-border); /* dezente Kontur */
   border-radius: 12px; /* Panel-Optik */
   margin-bottom: 16px; /* Abstand zum Grid */
+}
+
+@media (min-width: 344px) {
+  .menu-cats {
+    position: static;
+    top: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 820px) {
+  .menu-cats {
+    position: sticky;
+    top: 64px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1120px) {
+  .menu-cats {
+    position: sticky;
+    top: 64px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .menu-cats.stuck {
@@ -300,8 +364,9 @@ body {
   border-radius: 999px;
   font-weight: 700;
   cursor: pointer;
-  white-space: nowrap;
-  text-decoration: none;
+  white-space: normal;
+  width: 100%;
+  text-align: center;
   min-height: 40px;
   transition: border-color .2s ease, box-shadow .2s ease, background .2s ease
 }
@@ -311,19 +376,9 @@ body {
 }
 
 .menu-cats .active {
-  border-color: color-mix(in oklab, var(--primary) 40%, var(--line));
-  box-shadow: 0 0 0 3px var(--ring)
+  border-color: color-mix(in oklab, var(--muted));
+  box-shadow: 0 0 0 3px var(--muted)
 }
-
-#menu.menu-grid {
-  background: var(--menu-panel);
-  border: 1px solid var(--menu-panel-border);
-  border-radius: 14px;
-  padding: 12px; /* Innenabstand, damit Karten nicht am Rand kleben */
-  box-shadow: 0 12px 32px rgba(17,20,24,.04);
-  backdrop-filter: saturate(1.02);
-}
-
 
 .menu-grid {
   display: grid;
@@ -334,7 +389,6 @@ body {
 .menu-cats button, .menu-cats a {
   background: linear-gradient(180deg, #fff, #fafbff);
 }
-
 
 /* Kategorie-Karte */
 .menu-category {
@@ -558,7 +612,9 @@ body {
   display: grid;
   grid-template-columns: 1.2fr .9fr;
   gap: 28px;
-  align-items: center
+  align-items: center;
+  background: var(--surface-alt);
+
 }
 
 @media (max-width: 900px) {
@@ -695,6 +751,9 @@ body {
   gap: 8px;
   justify-content: space-around;
   padding: 10px;
+  height: var(--mobile-bar-height);
+  align-items: center;
+  padding-bottom: calc(10px + env(safe-area-inset-top, 0px));
   background: var(--surface);
   border-top: 1px solid var(--line)
 }
@@ -720,4 +779,8 @@ body {
   .mobile-bar {
     display: flex
   }
+  body {
+    padding-bottom: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom, 0px));
+  }
+
 }
