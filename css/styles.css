@@ -743,7 +743,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: calc(10px + env(safe-area-inset-bottom, 0px)); /* 10px Abstand + Safe-Area */
+  bottom: calc(1px + env(safe-area-inset-bottom, 0px)); /* 10px Abstand + Safe-Area */
   z-index: 120;
   display: none;
   gap: 8px;
