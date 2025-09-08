@@ -784,3 +784,49 @@ body {
   }
 
 }
+
+/*
+ * Popup overlay used to display full–sized images when thumbnails are clicked.
+ * It covers the entire viewport with a dark backdrop and centers the image.
+ */
+.image-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;            /* standardmäßig ausblenden */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;            /* über Bootstrap-Modals */
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+.image-popup.is-open { display: flex; }
+
+.image-popup img {
+  width: auto;              /* natürliche Größe, kein Strecken */
+  height: auto;
+  max-width: 90vw;          /* auf Viewport begrenzen */
+  max-height: 90vh;
+  object-fit: contain;      /* niemals verzerren */
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
+}
+
+@media (max-width: 576px) {
+  .image-popup {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-nav {
+    flex-direction: column;      /* untereinander statt Reihe */
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .footer-nav .to-top {
+    order: -1;                   /* nach oben verschieben */
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+}

@@ -269,10 +269,118 @@ function getBadgeIcon(type) {
 
 function escapeHTML(s) {
   return String(s).replace(/[&<>"']/g, c => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-      }[c]));
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[c]));
+
+
 }
+
+
+// Simple image lightbox for modal/media images
+function showPopup(src) {
+  const popup = document.getElementById('imagePopup');
+  if (!popup) return;
+  const img = popup.querySelector('img');
+  if (img) img.src = src;
+  popup.style.display = 'flex';
+}
+
+function hidePopup() {
+  const popup = document.getElementById('imagePopup');
+  if (!popup) return;
+  popup.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const state = { data: null, query: '', activeCat: 'alle' };
+  const input = document.getElementById('menu-search');
+  const clearBtn = document.getElementById('menu-search-clear');
+  const catsEl = document.getElementById('menu-cats');
+  const sentinel = document.getElementById('cats-sentinel');
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault();
+      input?.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === input) {
+      input.value = '';
+      state.query = '';
+      renderMenu(state);
+      input.blur();
+    }
+  });
+
+  if (sentinel && catsEl) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        catsEl.classList.toggle('stuck', entry.intersectionRatio === 0);
+      });
+    }, { rootMargin: '-64px 0px 0px 0px', threshold: [0, 1] });
+    io.observe(sentinel);
+  }
+
+  try {
+    state.data = await fetchMenu();
+    renderCategoryTabs(state, catsEl);
+    renderMenu(state);
+  } catch (err) {
+    console.error('Fehler beim Laden der Speisekarte:', err);
+    const target = document.getElementById('menu');
+    if (target) target.innerHTML = '<p>Die Speisekarte konnte nicht geladen werden. Bitte später erneut versuchen.</p>';
+  }
+
+  const onInput = debounce(() => {
+    state.query = (input.value || '').trim().toLowerCase();
+    renderMenu(state);
+  }, 120);
+  input?.addEventListener('input', onInput);
+
+  clearBtn?.addEventListener('click', () => {
+    if (!input) return;
+    input.value = '';
+    state.query = '';
+    renderMenu(state);
+    input.focus();
+  });
+
+  // Overlay- und Bild-Klick schließt Popup
+  const popupEl = document.getElementById('imagePopup');
+  if (popupEl) {
+    popupEl.addEventListener('click', (e) => {
+      if (e.target === popupEl || e.target.tagName === 'IMG') {
+        hidePopup();
+      }
+    });
+  }
+});
+
+// Escape schließt Popup
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') hidePopup();
+});
+
+// Delegation für Bilder/Links
+document.addEventListener('click', (e) => {
+  const anchor = e.target.closest('.mm-figure a, .mm-feature a');
+  if (anchor) {
+    e.preventDefault();
+    let src = anchor.getAttribute('href');
+    if (!src) {
+      const imgChild = anchor.querySelector('img');
+      if (imgChild) src = imgChild.getAttribute('src');
+    }
+    if (src) showPopup(src);
+    return;
+  }
+  const img = e.target.closest('.mm-figure img, .mm-feature img, .gallery img');
+  if (img) {
+    e.preventDefault();
+    const srcImg = img.getAttribute('src');
+    if (srcImg) showPopup(srcImg);
+  }
+});
