@@ -743,7 +743,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px)); /* 10px Abstand + Safe-Area */
   z-index: 120;
   display: none;
   gap: 8px;
@@ -751,9 +751,14 @@ body {
   padding: 10px;
   height: var(--mobile-bar-height);
   align-items: center;
-  padding-bottom: calc(10px + env(safe-area-inset-top, 0px));
+  /*padding-bottom: calc(10px + env(safe-area-inset-top, 0px));*/
   background: var(--surface);
-  border-top: 1px solid var(--line)
+  /*border-top: 1px solid var(--line)*/
+  border: 1px solid var(--line);
+  border-left: 0;
+  border-right: 0;
+  border-radius: 14px; /* optional: leicht schwebend */
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
 .mbar-item {
@@ -778,7 +783,7 @@ body {
     display: flex
   }
   body {
-    padding-bottom: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(var(--mobile-bar-height) + 10px + env(safe-area-inset-bottom, 0px));
   }
 
 }
