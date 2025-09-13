@@ -247,7 +247,7 @@ function classifyBadge(key) {
   // beliebt
   if (key === 'beliebt' || key.includes('empfohlen') || key.includes('top')) return 'popular';
   // scharf
-  if (key.includes('scharf') || key.includes('hot') || key.includes('spicy')) return 'hot';
+  if (key.includes('scharf') || key.includes('hot') || key.includes('spicy') || key.includes('leicht scharf')) return 'hot';
   // vegetarisch/vegan
   if (key.includes('vegan')) return 'veg';
   if (key.includes('vegetar')) return 'veg';

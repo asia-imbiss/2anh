@@ -659,6 +659,10 @@ body {
   flex-wrap: wrap;
   margin-top: 10px
 }
+.contact-actions .btn{
+  min-width: 180px;
+  text-align: center;
+}
 
 .map-embed iframe {
   width: 100%;

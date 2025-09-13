@@ -4,7 +4,7 @@
     {
       "name": "Vorspeisen",
       "items": [
-        { "name": "V1. My Tom Instant Nudeln-Suppe mit Hühnerfleisch und Gemüse", "price": 5.5 },
+        { "name": "V1. My Tom Instant Nudeln-Suppe mit Hühnerfleisch und Gemüse", "price": 6.0 },
         { "name": "V2. Vietnamesische Frühlingsrollen", "price": 3.0 },
         { "name": "V3. Mini Frühlingsrolle", "price": 2.5, "badges": ["Beliebt"]},
         { "name": "V4. Gebackene Wan-Tan", "price": 2.5 }
@@ -13,83 +13,82 @@
     {
       "name": "Nudelgerichte",
       "items": [
-        { "name": "1. Gebratene Nudeln mit Hühnerfleisch, Gemüse", "price": 6.0, "badges": ["Beliebt"] },
-        { "name": "2. Gebratene Nudeln mit Schweinefleisch, Gemüse", "price": 6.0 },
-        { "name": "3. Gebratene Nudeln mit Hühner-, Schweinefleisch, Gemüse", "price": 6.5 },
-        { "name": "4. Gebratene Nudeln mit Hühnerfleisch, Schinken, Gemüse", "price": 6.5,"badges": ["Beliebt"] },
-        { "name": "5. Gebratene Nudeln mit Schweinefleisch, Garnelen, Gemüse", "price": 7.0 },
-        { "name": "6. Gebratene Nudeln mit Hühnerfleisch, Garnelen, Gemüse", "price": 7.0 },
-        { "name": "7. Gebratene Nudeln mit Hühnerfleisch, Krabben, Gemüse", "price": 7.5 },
-        { "name": "8. Gebratene Nudeln mit Hühnerfleisch, Schweinefleisch, Krabben, Gemüse", "price": 7.5 },
-        { "name": "9. Knusprig gebackenes Hühnerfleisch mit gebratenen Nudeln, Gemüse", "price": 7.0 }
+        { "name": "1. Gebratene Nudeln mit Hühnerfleisch, Gemüse", "price": 6.5, "badges": ["Beliebt"] },
+        { "name": "2. Gebratene Nudeln mit Schweinefleisch, Gemüse", "price": 6.5 },
+        { "name": "3. Gebratene Nudeln mit Hühner-, Schweinefleisch, Gemüse", "price": 7.0 },
+        { "name": "4. Gebratene Nudeln mit Hühnerfleisch, Schinken, Gemüse", "price": 7.0,"badges": ["Beliebt"] },
+        { "name": "5. Gebratene Nudeln mit Schweinefleisch, Schinken, Gemüse", "price": 7.0 },
+        { "name": "6. Gebratene Nudeln mit Hühnerfleisch, Krabben, Gemüse", "price": 7.5 },
+        { "name": "7. Gebratene Nudeln mit Schweinefleisch, Krabben, Gemüse", "price": 7.5 },
+        { "name": "8. Gebratene Nudeln mit Schinken, Krabben, Gemüse", "price": 7.5 },
+        { "name": "9. Knusprig gebackenes Hühnerfleisch mit gebratenen Nudeln und Gemüse", "price": 7.5 }
       ]
     },
     {
       "name": "Reisgerichte",
       "items": [
-        { "name": "11. Gebratener Reis mit Hühnerfleisch, Gemüse", "price": 6.0,"badges": ["Beliebt"] },
-        { "name": "12. Gebratener Reis mit Garnelen, Gemüse", "price": 6.0 },
-        { "name": "13. Gebratener Reis mit Hühnerfleisch, Schweinefleisch, Gemüse", "price": 6.5 },
-        { "name": "14. Gebratener Reis mit Hühnerfleisch, Schinken, Gemüse", "price": 6.5,"badges": ["Beliebt"] },
-        { "name": "15. Gebratener Reis mit Schweinefleisch, Schinken, Gemüse", "price": 6.5 },
-        { "name": "16. Gebratener Reis mit Hühnerfleisch, Krabben, Gemüse", "price": 7.0 },
-        { "name": "17. Gebratener Reis mit Schweinefleisch, Krabben, Gemüse", "price": 7.0 },
-        { "name": "18. Gebratener Reis mit Schinken, Krabben, Gemüse", "price": 7.0 },
-        { "name": "19. Knusprig gebackenes Hühnerfleisch mit gebratenem Reis, Gemüse", "price": 7.0 }
+        { "name": "11. Gebratener Reis mit Hühnerfleisch, Gemüse", "price": 6.5,"badges": ["Beliebt"] },
+        { "name": "12. Gebratener Reis mit Schweinefleisch, Gemüse", "price": 6.5 },
+        { "name": "13. Gebratener Reis mit Hühnerfleisch, Schweinefleisch, Gemüse", "price": 7.0 },
+        { "name": "14. Gebratener Reis mit Hühnerfleisch, Schinken, Gemüse", "price": 7.0,"badges": ["Beliebt"] },
+        { "name": "15. Gebratener Reis mit Schweinefleisch, Schinken, Gemüse", "price": 7.0 },
+        { "name": "16. Gebratener Reis mit Hühnerfleisch, Krabben, Gemüse", "price": 7.5 },
+        { "name": "17. Gebratener Reis mit Schweinefleisch, Krabben, Gemüse", "price": 7.5 },
+        { "name": "18. Gebratener Reis mit Schinken, Krabben, Gemüse", "price": 7.5 },
+        { "name": "19. Knusprig gebackenes Hühnerfleisch mit gebratenem Reis, Gemüse", "price": 7.5 }
       ]
     },
     {
       "name": "Hühnerfleisch",
       "note": "mit gekochtem Reis als Beilage",
       "items": [
-        { "name": "21. Gebratenes Hühnerfleisch mit versch. Gemüse, Erdnussoße", "price": 8.0 },
-        { "name": "22. Chop Suey: Gebratenes Hühnerfleisch mit versch. Gemüse", "price": 7.5, "badges": ["Beliebt"] },
-        { "name": "23. Gebratenes Hühnerfleisch mit versch. Gemüse und indischer Curry", "price": 7.5 },
-        { "name": "24. Gebratenes Hühnerfleisch mit versch. Gemüse, Kokosmilch und Curry", "price": 7.5 },
-        { "name": "25. Gebratenes Hühnerfleisch mit versch. Gemüse, Thai-Curry", "price": 7.5},
-        { "name": "26. Gebratenes Hühnerfleisch mit versch. Gemüse, süß-sauer Soße", "price": 7.5},
-        { "name": "27. Gebratenes Hühnerfleisch mit versch. Gemüse, Chop Suey", "price": 8.0 },
-        { "name": "28. Knusprig gebackenes Hühnerfleisch mit süß-sauer Soße", "price": 8.0 },
-        { "name": "29. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse, Thai-Curry", "price": 8.5 },
-        { "name": "30. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse, Erdnussoße", "price": 8.5 }
+        { "name": "21. Gebratenes Hühnerfleisch mit versch. Gemüse, Erdnussoße", "price": 8.5 },
+        { "name": "22. Chop Suey: Gebratenes Hühnerfleisch mit versch. Gemüse", "price": 8.0, "badges": ["Beliebt"] },
+        { "name": "23. Gebratenes Hühnerfleisch mit versch. Gemüse in thailändischer Curry und Kokosmilch", "price": 8.5, "badges": ["leicht scharf"] },
+        { "name": "24. Gebratenes Hühnerfleisch mit versch. Gemüse in chinesicher Curry und Kokosmilch", "price": 8.5, "badges": ["leicht scharf"]  },
+        { "name": "25. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse (Chop Suey)", "price": 8.5},
+        { "name": "26. Knusprig gebackenes Hühnerfleisch mit Ananas in süß-sauer Soße", "price": 8.5},
+        { "name": "27. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse in thailändischer Curry und Kokosmilch", "price": 9.0, "badges": ["leicht scharf"] },
+        { "name": "28. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse in chinesischer Curry und Kokosmilch", "price": 9.0, "badges": ["leicht scharf"] },
+        { "name": "29. Knusprig gebackenes Hühnerfleisch mit versch. Gemüse und Erdnusssoße", "price": 9.0 }
       ]
     },
     {
       "name": "Schweinefleisch",
       "note": "mit gekochtem Reis als Beilage",
       "items": [
-        { "name": "31. Gebratenes Schweinefleisch mit versch. Gemüse, Erdnussoße", "price": 8.0 },
+        { "name": "31. Gebratenes Schweinefleisch mit versch. Gemüse und Erdnussoße", "price": 8.5 },
         { "name": "32. Chop Suey: Gebratenes Schweinefleisch mit versch. Gemüse", "price": 8.0,  "badges": ["Beliebt"] },
-        { "name": "33. Gebratenes Schweinefleisch mit versch. Gemüse, scharf (Thai-Curry)", "price": 8.0, "badges": [ "scharf"] },
-        { "name": "34. Gebratenes Schweinefleisch mit versch. Gemüse, süß-sauer Soße", "price": 8.0 },
-        { "name": "35. Knusprig gebackenes Schweinefleisch mit versch. Gemüse", "price": 8.0 },
-        { "name": "36. Knusprig gebackenes Schweinefleisch mit süß-sauer Soße", "price": 8.0 },
-        { "name": "37. Knusprig gebackenes Schweinefleisch mit Thai-Curry, versch. Gemüse", "price": 8.5 },
-        { "name": "38. Knusprig gebackenes Schweinefleisch mit versch. Gemüse, Erdnussoße", "price": 8.5 }
+        { "name": "33. Gebratenes Schweinefleisch mit versch. Gemüse in thailändischer Curry und Kokosmilch)", "price": 8.5, "badges": [ "leicht scharf"] },
+        { "name": "34. Gebratenes Schweinefleisch mit versch. Gemüse in chinesischer Curry und Kokosmilch", "price": 8.5, "badges": [ "leicht scharf"] },
+        { "name": "35. Knusprig gebackenes Schweinefleisch mit versch. Gemüse (Chop Suey)", "price": 8.5 },
+        { "name": "36. Knusprig gebackenes Schweinefleisch mit Ananas in süß-sauer Soße", "price": 8.5 },
+        { "name": "37. Knusprig gebackenes Schweinefleisch mit versch. Gemüse in thailändischer Curry, Kokosmilch", "price": 9.0, "badges": [ "leicht scharf"] },
+        { "name": "38. Knusprig gebackenes Schweinefleisch mit versch. Gemüse in chinesischer Curry und Kokosmilch", "price": 9.0, "badges": [ "leicht scharf"] },
+        { "name": "39. Knusprig gebackenes Schweinefleisch mit versch. Gemüse und Erdnussoße", "price": 9.0 }
       ]
     },
     {
       "name": "Entenfleisch",
-      "note": "mit gekochtem Reis als Beilage",
       "items": [
-        { "name": "40. Knusprig gebackenes Entenfleisch mit versch. Gemüse", "price": 7.5 },
-        { "name": "41. Knusprig gebackenes Entenfleisch mit gebratenem Reis (Chop Suey)", "price": 9.0,"badges": ["Beliebt"] },
-        { "name": "42. Knusprig gebackenes Entenfleisch mit gebratenen Nudeln", "price": 9.0 },
-        { "name": "43. Knusprig gebackenes Entenfleisch mit versch. Gemüse, Kokosmilch und Curry", "price": 9.0 },
-        { "name": "44. Knusprig gebackenes Entenfleisch mit versch. Gemüse, Thai-Curry", "price": 9.0 },
-        { "name": "45. Knusprig gebackenes Entenfleisch mit süß-sauer Soße", "price": 9.0 },
-        { "name": "46. Knusprig gebackenes Entenfleisch mit Ananas in süß-sauer Soße und gekochtem Reis", "price": 8.5 }
+        { "name": "40. Knusprig gebackenes Entenfleisch mit gebratenen Nudeln und versch. Gemüse", "price": 8.0 },
+        { "name": "41. Knusprig gebackenes Entenfleisch mit gebratenem Reis und versch. Gemüse", "price": 8.0,"badges": ["Beliebt"] },
+        { "name": "42. Knusprig gebackenes Entenfleisch mit verschiedenem Gemüse und Reis (Chop Suey)", "price": 9.0 },
+        { "name": "43. Knusprig gebackenes Entenfleisch mit versch. Gemüse in thailändischer Curry, Kokosmilch und Reis", "price": 9.5, "badges": [ "leicht scharf"] },
+        { "name": "44. Knusprig gebackenes Entenfleisch mit versch. Gemüse in chinesischer Curry, Kokosmilch und Reis", "price": 9.5 , "badges": [ "leicht scharf"]},
+        { "name": "45. Knusprig gebackenes Entenfleisch mit versch. Gemüse, Erdnusssoße und Reis", "price": 9.5 },
+        { "name": "46. Knusprig gebackenes Entenfleisch mit Ananas in süß-sauer Soße und Reis", "price": 9.0 }
       ]
     },
     {
       "name": "Vegetarisch 🌱",
       "items": [
-        { "name": "50. Gebratene Nudeln", "price": 5.5},
-        { "name": "51. Gebratener Reis mit versch. Gemüse", "price": 5.5 },
-        { "name": "52. Gebratene Nudeln mit versch. Gemüse (Chop Suey)", "price": 5.5 },
-        { "name": "53. Tofu mit versch. Gemüse, Curry", "price": 7.5,  "badges": ["Beliebt"]},
-        { "name": "54. Tofu mit versch. Gemüse, Kokosmilch und Curry", "price": 7.5 },
-        { "name": "55. Tofu mit versch. Gemüse, gebratenem Reis", "price": 8.0 }
+        { "name": "50. Gebratene Nudeln mit versch. Gemüse", "price": 6.0},
+        { "name": "51. Gebratener Reis mit versch. Gemüse", "price": 6.0 },
+        { "name": "52. Tofu mit versch. Gemüse (Chop Suey) und Reis", "price": 8.5 },
+        { "name": "53. Tofu mit versch. Gemüse in thailändischer Curry, Kokosmilch und Reis", "price": 9.0,  "badges": [ "leicht scharf"]},
+        { "name": "54. Tofu mit versch. Gemüse in chinesischer Curry, Kokosmilch und Reis", "price": 9.0,   "badges": [ "leicht scharf"]},
+        { "name": "55. Tofu mit versch. Gemüse in Erdnusssoße und Reis", "price": 9.0 }
       ]
     }
   ]
